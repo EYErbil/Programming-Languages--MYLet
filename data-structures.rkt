@@ -17,7 +17,8 @@
   ;; -----------------------
   ;; INSERT YOUR CODE HERE 
   ;; -----------------------
-
+  (list-val
+   (lst list?))
   ;; -----------------------
 )
 
@@ -34,7 +35,11 @@
 ;; -----------------------
 ;; INSERT YOUR CODE HERE 
 ;; -----------------------
-
+(define expval->list
+  (lambda (v)
+    (cases expval v
+      (list-val (lst) lst)
+      (else (expval-extractor-error 'list v)))))
 ;; -----------------------
 
 ;; expval->bool : ExpVal -> Bool

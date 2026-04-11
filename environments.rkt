@@ -21,12 +21,19 @@
   (lambda ()
      (extend-env
       'v (num-val 3)
+      
       ;; -----------------------
       ;; INSERT YOUR CODE HERE 
       ;; -----------------------
+      (extend-env
+       'x (num-val 6)
+       (extend-env
+        'y (num-val 10)
+        (extend-env
+         'z (num-val 20)
+         (empty-env)))))))
 
-       
-       (empty-env))))
+      
       ;; -----------------------
 
 ;;;;;;;;;;;;;;;; environment constructors and observers ;;;;;;;;;;;;;;;;
