@@ -124,6 +124,13 @@
       ;; -----------------------
       (list-exp ()
        (list-val '()))
+      
+      (cons-exp (exp1 lst)
+       (let ((val1 (value-of exp1 env))
+             (lst-val (value-of lst env)))
+         (let ((num1 (expval->num val1))
+               (lst1 (expval->list lst-val)))
+           (list-val (cons num1 lst1)))))
                 
 
       ;; -----------------------

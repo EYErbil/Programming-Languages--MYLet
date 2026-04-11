@@ -43,6 +43,9 @@
     (expression
      ("create-new-list" "(" ")")
      list-exp)
+    (expression
+     ("cons" expression "to" expression)
+     cons-exp)
 
     ;; -----------------------
 ))
