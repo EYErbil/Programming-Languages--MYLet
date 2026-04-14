@@ -27,7 +27,6 @@
 (define the-grammar
   '((program (expression) a-program)
     
-    
     (expression (number) const-exp)
 
     (expression
@@ -42,14 +41,7 @@
     ;; INSERT YOUR CODE HERE 
     ;; -----------------------
     (expression
-     ("create-new-list" "(" ")")
-     list-exp)
-    (expression
-     ("cons" expression "to" expression)
-     cons-exp)
-    (expression
-     ("multiplication" "(" expression ")")
-     mul-exp)
+     ("create-new-list" "("")") list-exp)
 
     ;; -----------------------
 ))

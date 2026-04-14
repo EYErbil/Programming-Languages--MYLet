@@ -122,30 +122,8 @@
       ;; -----------------------
       ;; INSERT YOUR CODE HERE 
       ;; -----------------------
-      (list-exp ()
-       (list-val '()))
-      
-      (cons-exp (exp1 lst)
-       (let ((val1 (value-of exp1 env))
-             (lst-val (value-of lst env)))
-         (let ((num1 (expval->num val1))
-               (lst1 (expval->list lst-val)))
-           (list-val (cons num1 lst1)))))
-      (mul-exp (lst)
-       (let ((val1 (value-of lst env)))
-         (let ((lst1 (expval->list val1)))
-           (num-val (mul-list-value-of-helper lst1)))))
-      
-                
+      (list-exp (
 
       ;; -----------------------
 
       )))
-
-(define mul-list-value-of-helper
-  (lambda (lst)
-    (cond
-       ((null? lst) 0)
-       ((null? (cdr lst)) (car lst))
-       (else (* (car lst) (mul-list-value-of-helper (cdr lst)))))))
-       
