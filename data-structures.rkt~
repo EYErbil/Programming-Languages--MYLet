@@ -19,8 +19,6 @@
   ;; -----------------------
   (list-val
    (lst list?))
-  (rational-val
-   (rational pair?))
   ;; -----------------------
 )
 
@@ -33,12 +31,6 @@
     (cases expval v
       (num-val (num) num)
       (else (expval-extractor-error 'num v)))))
-(define expval->rational
-  (lambda (v)
-    (cases expval v
-      (rational-val (rat) rat) 
-      (num-val (num) num)     
-      (else (expval-extractor-error 'rational v)))))
 
 ;; -----------------------
 ;; INSERT YOUR CODE HERE 
