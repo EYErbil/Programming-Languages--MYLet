@@ -17,21 +17,18 @@
 ;; Page: 69
 
 ;;; initialize environment with x, y, z
-(define init-env 
+(define init-env
   (lambda ()
-     (extend-env
-      'v (num-val 3)
-      
       ;; -----------------------
-      ;; INSERT YOUR CODE HERE 
+      ;; INSERT YOUR CODE HERE
       ;; -----------------------
       (extend-env
-       'x (num-val 6)
+       'x (num-val 4)
        (extend-env
-        'y (num-val 10)
+        'y (num-val 2)
         (extend-env
-         'z (num-val 20)
-         (empty-env)))))))
+         'z (num-val 3)
+         (empty-env))))))
 
       
       ;; -----------------------

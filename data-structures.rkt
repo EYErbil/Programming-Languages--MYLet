@@ -21,6 +21,8 @@
    (lst list?))
   (rational-val
    (rational pair?))
+  (str-val
+   (str string?))
   ;; -----------------------
 )
 
