@@ -155,6 +155,16 @@
                         (eopl:error 'value-of "Denominator cannot be zero: ~s" num2)
                         (rational-val (cons num1 num2))))
 
+      (simpl-exp (exp1)
+                 (let ((val1 (value-of exp1 env)))
+                   (let ((num1 (expval->rational val1)))
+                     (if (number? num1)
+                         (num-val num1)
+                         (let ((foo (car num1))
+                               (bar (cdr num1)))
+                           (let ((g (gcd foo bar)))
+                             (rational-val (cons (/ foo g) (/ bar g)))))))))
+
       ;; -----------------------
 
       )))

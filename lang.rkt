@@ -63,6 +63,9 @@
     (expression
      ("op" "(" expression "," expression "," number ")")
      op-exp)
+    (expression
+     ("simpl" "(" expression ")")
+     simpl-exp)
     )
      
 
